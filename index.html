@@ -18,9 +18,27 @@
 </head>
 <body>
 
-	<button type="button" onclick="alo('a mais')">Click Me 1!</button>
-	<button type="button" onclick="alo('teste')">Click Me 2!</button>
-	<button type="button" onclick="alo('ihuuuuuuu')">Click Me 3!</button>
+	<button type="button" onclick="trocacor('red')">Click Me 1!</button>
+	<button type="button" onclick="trocacor('black')">Click Me 2!</button>
+	<button type="button" onclick="trocacor('green')">Click Me 3!</button>
+
+	<form>
+		<fieldset>
+			<legend>Fruit juice size</legend>
+			<p>
+				<input type="radio" name="size" id="size_1" value="small" />
+				<label for="size_1">Small</label>
+			</p>
+			<p>
+				<input type="radio" name="size" id="size_2" value="medium" onclick="alo('ihuuuuuuu')" />
+				<label for="size_2">Medium</label>
+			</p>
+			<p>
+				<input type="radio" name="size" id="size_3" value="large" />
+				<label for="size_3">Large</label>
+			</p>
+		</fieldset>
+	</form>
 
 	<div>
 		<h1>Teste</h1>
@@ -29,6 +47,11 @@
 	<script>
 		function alo(variavel) {
 			alert("alo end " + variavel);
+		}
+
+		function trocacor(cor) {
+			document.body.style.backgroundColor = cor;
+			alo(cor)
 		}
 	</script>
 
